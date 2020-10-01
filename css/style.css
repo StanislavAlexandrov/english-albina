@@ -161,7 +161,7 @@ header .navigation li a {
     .section {
         justify-content: center;
 
-        padding: 40px 40px 0;
+        padding: 40px 40px 255px;
     }
 
     .content {
