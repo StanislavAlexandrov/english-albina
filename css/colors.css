@@ -1,0 +1,11 @@
+body {
+    --main-link-color: #fff;
+    --main-gradient-first-color: #03a9f4;
+    --main-gradient-second-color: #e91e63;
+}
+
+body.dark-theme {
+    --main-link-color: #fff;
+    --main-gradient-first-color: #f79fef;
+    --main-gradient-second-color: #000000;
+}

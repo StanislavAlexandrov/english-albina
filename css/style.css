@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap"');
+@import '../css/colors.css';
 
 * {
     margin: 0;
@@ -11,7 +12,24 @@
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(#03a9f4, #e91e63);
+    background: linear-gradient(
+        var(--main-gradient-first-color),
+        var(--main-gradient-second-color)
+    );
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+}
+
+.section .dark-theme {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(
+        var(--main-gradient-first-color),
+        var(--main-gradient-second-color)
+    );
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,7 +54,7 @@
 }
 
 .custom-shape-divider-bottom-1601554057 .shape-fill {
-    fill: #ffffff;
+    fill: var(--main-link-color);
 }
 
 header {
@@ -53,6 +71,7 @@ header {
 header .logo {
     font-size: 2em;
     color: #fff;
+
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
@@ -68,7 +87,7 @@ header .navigation li {
 }
 
 header .navigation li a {
-    color: #fff;
+    color: var(--main-link-color);
     margin-left: 40px;
     text-decoration: none;
 }
@@ -80,24 +99,24 @@ header .navigation li a {
 }
 
 .content h2 {
-    color: #fff;
+    color: var(--main-link-color);
     font-size: 5em;
     line-height: 1em;
 }
 
 .content h2 span {
-    color: #fff;
+    color: var(--main-link-color);
     font-size: 0.7em;
 }
 
 .content p {
-    color: #fff;
+    color: var(--main-link-color);
     margin: 10px 0 20px;
 }
 
 .content a {
     padding: 10px 30px;
-    background: #fff;
+    background: var(--main-link-color);
     display: inline-block;
     text-decoration: none;
 }
@@ -133,18 +152,38 @@ header .navigation li a {
     }
 
     header .navigation li a {
-        color: #fff;
+        color: var(--main-link-color);
         margin-left: 0;
         text-decoration: none;
         font-size: 30px;
     }
-    header .toggleMenu {
+
+    header .toggleTheme {
         position: relative;
+
         width: 30px;
         height: 30px;
-        background: url('../img/albina2.jpeg');
+
         background-size: 30px;
-        background-repeat: no-repeat;
+
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    header .toggleTheme.active {
+        position: fixed;
+        right: 40px;
+
+        background-size: 25px;
+    }
+
+    header .toggleMenu {
+        position: fixed;
+        right: 40px;
+        width: 30px;
+        height: 30px;
+        background: url('../assets/img/hamburger.svg');
+        background-size: 30px;
         background-position: center;
         cursor: pointer;
         z-index: 1000;
@@ -153,11 +192,11 @@ header .navigation li a {
     header .toggleMenu.active {
         position: fixed;
         right: 40px;
-        background: url('../img/albina2.jpeg');
+        background: url('../assets/img/albina2.jpeg');
         background-size: 25px;
-        background-repeat: no-repeat;
         background-position: center;
     }
+
     .section {
         justify-content: center;
 
