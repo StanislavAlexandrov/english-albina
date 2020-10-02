@@ -7,10 +7,10 @@ function menuToggle() {
 
 function themeToggle() {
     let toggleTheme = document.querySelector('.toggleTheme');
-    if (toggleTheme.innerText == 'regular mode') {
-        toggleTheme.innerText = 'dark mode';
+    if (toggleTheme.innerText == '🌞') {
+        toggleTheme.innerText = '🌚';
     } else {
-        toggleTheme.innerText = 'regular mode';
+        toggleTheme.innerText = '🌞';
     }
 
     document.body.classList.toggle('dark-theme');
